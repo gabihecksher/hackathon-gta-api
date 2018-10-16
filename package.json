@@ -1,0 +1,27 @@
+{
+  "name": "api-gta",
+  "version": "1.1.0",
+  "description": "api pra hackaton time gta",
+  "engines": {
+    "node": "8.12.0"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
+    "del": "2.2.0",
+    "express": "^4.14.0",
+    "http": "0.0.0",
+    "method-override": "^2.3.6",
+    "morgan": "^1.7.0",
+    "superlogin": "^0.6.1"
+  },
+  "dependencies": {
+    "np": "^2.16.0",
+    "sequelize": "^4.39.1",
+    "sequelize-cli": "^5.1.0"
+  }
+}
