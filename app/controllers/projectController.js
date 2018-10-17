@@ -12,3 +12,7 @@ exports.create = function(req, res){
 exports.getById = function(req, res){
     projectHelper.getById(req.params['id'], res)
 }
+
+exports.put = function(req,res){
+    projectHelper.put(req, res)
+}

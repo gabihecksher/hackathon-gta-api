@@ -3,7 +3,6 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const config = require('../../config/database.js');
 
-
 const db = {};
 const sequelize = new Sequelize(config);
 
@@ -23,7 +22,14 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
-
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
+  })
+  .catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
 //db['User'].hasOne(db['CourseUniversity'],  { foreignKey: 'CourseUniversityId' });
 //sequelize.sync()
 //db.User.hasOne(db.CourseUniversity);

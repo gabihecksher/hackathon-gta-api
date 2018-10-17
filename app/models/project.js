@@ -3,10 +3,10 @@ module.exports = (sequelize, DataTypes) => {
     const Project = sequelize.define('Project', {
       name: DataTypes.STRING,
       description: DataTypes.TEXT,
-      img: DataTypes.STRING,
-      video: DataTypes.STRING,
+      img: DataTypes.BLOB({length: 'medium'}),
+      video: DataTypes.BLOB({length: 'medium'}),
       likes: DataTypes.INTEGER,
-      text: DataTypes.STRING
+      text: DataTypes.BLOB({length: 'medium'})
       
     });
     Project.associate = models => {
