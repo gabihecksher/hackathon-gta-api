@@ -4,10 +4,12 @@ var app      = express();                               // create our app w/ exp
 var morgan = require('morgan');             // log requests to the console (express4)
 const { User } = require('./app/models');
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
-//User.create({ name: 'dsdss', email: 'dsdsdo@rdsdstdsds.cdsdsm.bdsr', password: '1ds6' });
+
+
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 const userRoutes = require('./app/routes/userRoutes');
+const projectRoutes = require('./app/routes/projectRoutes')
 
 // configuration =================
 
@@ -19,7 +21,8 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 
 
-app.use('/', userRoutes);
+app.use('/', userRoutes );
+app.use('/', projectRoutes);
 
 
 // listen (start app with node server.js) ======================================

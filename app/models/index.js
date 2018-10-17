@@ -23,6 +23,10 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
+
+//db['User'].hasOne(db['CourseUniversity'],  { foreignKey: 'CourseUniversityId' });
+//sequelize.sync()
+//db.User.hasOne(db.CourseUniversity);
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

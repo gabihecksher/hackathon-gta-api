@@ -3,7 +3,6 @@ const models = require('../models/index')
 
 // le todos os usuarios
 exports.get = function(req, res){
-
     models.User.findAll().then(userResponse => {
         res.status(200).json(userResponse)
     }).catch(error => {
@@ -16,7 +15,11 @@ exports.create = function(body, res) {
     const payload = {
         'name': body['name'],
         'email': body['email'],
-        'password': body['password']
+        'password': body['password'],
+        'img': body['img'],
+        'scholarship': body['scholarship'],
+        'birthdate': body['birthdate'],
+        'gender': body['gender']
     }
 
     models.User.create(payload, function (err, user) {
